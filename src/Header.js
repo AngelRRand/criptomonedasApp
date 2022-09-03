@@ -4,9 +4,7 @@ import styles from '../styles/Header'
 
 const Header = () => {
   return (
-    <SafeAreaView  >
       <Text style={styles.encabezado}>CriptoMonedas</Text>
-    </SafeAreaView>
   )
 }
 
