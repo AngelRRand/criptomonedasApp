@@ -1,8 +1,8 @@
 import { View, Image, SafeAreaView, StatusBar } from 'react-native';
 import styles from './styles/App';
 import Header from './src/Header';
-import Form from './src/Header';
-import Cot from './src/Header';
+import Form from './src/Form';
+import Cot from './src/Cot';
 
 export default function App() {
   return (
@@ -10,10 +10,11 @@ export default function App() {
       <StatusBar/>
       <Header/> 
       <Image
-        source={{uri:'https://i.postimg.cc/mg4P1LFD/cryptomonedas.png'}}
+        source={{uri:'https://i.postimg.cc/qBWhMx4Z/cryptomonedas.png'}}
         style={styles.imagen}
 
       /> 
+      <Form/>
     </SafeAreaView> 
   );
 }
