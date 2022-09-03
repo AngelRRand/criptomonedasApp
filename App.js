@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Image } from 'react-native';
+import styles from './styles/App';
+import Header from './src/Header';
+import Form from './src/Header';
+import Cot from './src/Header';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+
+      <Header/> 
+      <Image
+        source={{uri:'https://i.postimg.cc/mg4P1LFD/cryptomonedas.png'}}
+        style={styles.imagen}
+
+      /> 
+    </> 
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
