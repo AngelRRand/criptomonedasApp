@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor:  '#181818',
+    backgroundColor:  '#222222',
     alignItems: 'center',
     justifyContent: 'center',
     marginVertical:10,
@@ -13,6 +13,15 @@ const styles = StyleSheet.create({
   text:{
     fontSize:22,
     color: '#fff'
+  },
+  btnSelect: {
+    width: 60,
+    height: 60,
+    textAlign:'center',
+    justifyContent:'center',
+    backgroundColor:'#fff',
+    color: '#f7f7f7',
+    alignItems:'center'
   }
 })
 
