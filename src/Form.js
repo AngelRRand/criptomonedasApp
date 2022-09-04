@@ -21,6 +21,9 @@ const Form = () => {
   const obtenerMoneda = moneda =>{
     setMoneda(moneda)
   } 
+  const obtenerCripto = cripto =>{
+    setCriptoMoneda(cripto)
+  } 
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Moneda</Text>
@@ -39,6 +42,19 @@ const Form = () => {
 
 
       <Text style={styles.text}>Criptomoneda</Text>
+
+      <Picker 
+        selectedValue={criptoMoneda}
+        itemStyle={{ height: 120 }} 
+        onValueChange={cripto=> obtenerCripto(cripto)}
+      >
+        <Picker.Item label="- Seleccione -" value="" />
+        {
+          setCriptoMonedas.map(cript =>{
+            <Picker.Item key={cript.CoinInfo.id} label={cript.CoinInfo.FullName} value={cript.CoinInfo.Name} />
+          })
+        }
+      </Picker>
     </View>
   )
 }
