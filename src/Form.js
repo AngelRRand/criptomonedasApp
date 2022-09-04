@@ -6,7 +6,7 @@ import axios from 'axios'
 const Form = () => {
   const [moneda, setMoneda] = useState('');
   const [criptoMoneda, setCriptoMoneda] = useState('');
-  const [criptoMonedas, setCriptoMonedas] = useState('');
+  const [criptoMonedas, setCriptoMonedas] = useState([]);
 
 
   useEffect(() => {
@@ -18,19 +18,34 @@ const Form = () => {
     }
     consultarApi()
   }, []);
+
+
+  //Funciones
+
   const obtenerMoneda = moneda =>{
     setMoneda(moneda)
   } 
   const obtenerCripto = cripto =>{
     setCriptoMoneda(cripto)
   } 
+  const cotizarPrecio = () =>{
+    /* console.log('hola') */
+    if(moneda === ''  && criptoMoneda === ''){
+      console.log('No se puede cotizarr')
+    }else{
+
+      console.log('..cotizando')
+    }
+  }
+
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Moneda</Text>
 
       <Picker 
         selectedValue={moneda}
-        itemStyle={{ height: 120 }} 
+        itemStyle={{ height: 200 }} 
         onValueChange={moneda=> obtenerMoneda(moneda)}
       >
         <Picker.Item label="- Seleccione -" value="" />
@@ -49,11 +64,11 @@ const Form = () => {
         onValueChange={cripto=> obtenerCripto(cripto)}
       >
         <Picker.Item label="- Seleccione -" value="" />
-        {
-          setCriptoMonedas.map(cript =>{
-            <Picker.Item key={cript.CoinInfo.id} label={cript.CoinInfo.FullName} value={cript.CoinInfo.Name} />
-          })
-        }
+        { criptoMonedas.map(cript =>{
+            return(
+              <Picker.Item key={cript.CoinInfo.id} label={cript.CoinInfo.FullName} value={cript.CoinInfo.Name} />
+            )
+          })} 
       </Picker>
 
       <TouchableHighlight 
