@@ -9,19 +9,24 @@ const styles = StyleSheet.create({
     marginVertical:10,
     marginHorizontal:20,
     borderRadius:5,
+    elevation:2
   },
   text:{
+    
     fontSize:22,
     color: '#272727'
   },
   btn: {
-    height: 60,
+    height: 40,
+    width: 120,
     backgroundColor:'#ffdb3c',
     marginTop:20,
-    alignItems:'center'
+    justifyContent:'center',
+    borderRadius:10,
+    
   },
   btnText:{
-    color: '#f7f7f7',
+    color: '#161616',
     fontSize:18,
     textAlign:'center',
   }
