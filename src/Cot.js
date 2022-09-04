@@ -4,8 +4,8 @@ import styles from '../styles/Cot'
 
 const Cot = ({resultado}) => {
   return (
-    <View>
-      <Text style={styles.encabezado}>{resultado.PRICE}</Text>
+    <View style={styles.encabezado}>
+      <Text style={styles.text}>{resultado.PRICE}</Text>
     </View>
   )
 }

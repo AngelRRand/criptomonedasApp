@@ -38,9 +38,16 @@ export default function App() {
         setCriptoMoneda={setCriptoMoneda}
         setConsultarAPI={setConsultarAPI}
       />
-      <Cot 
-        resultado={resultado}
-      />
+      {
+        resultado.length === 0 ?
+          <></>
+          :
+          <Cot
+            resultado={resultado}
+          />
+        
+      }
+
     </SafeAreaView>
   );
 }

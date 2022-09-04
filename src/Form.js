@@ -76,7 +76,7 @@ const Form = ({moneda, setMoneda, criptoMoneda, setCriptoMoneda, setConsultarAPI
           <Picker.Item label="- Seleccione -" value="" />
           {criptoMonedas.map(cript => {
             return (
-              <Picker.Item key={cript.CoinInfo.id} label={cript.CoinInfo.FullName} value={cript.CoinInfo.Name} />
+              <Picker.Item key={cript.CoinInfo.Id} label={cript.CoinInfo.FullName} value={cript.CoinInfo.Name} />
             )
           })}
         </Picker>

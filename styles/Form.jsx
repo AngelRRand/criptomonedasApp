@@ -3,9 +3,10 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
+    height: '40%',
     backgroundColor:  '#ffffff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     marginVertical:10,
     marginHorizontal:20,
     borderRadius:5,
@@ -17,19 +18,19 @@ const styles = StyleSheet.create({
     color: '#272727'
   },
   btn: {
-    height: 40,
-    width: 120,
-    backgroundColor:'#ffdb3c',
+    height: 60,
+    width: '100%',
+    backgroundColor:'#030303',
     marginTop:20,
     justifyContent:'center',
-    borderRadius:10,
     border:'#161616',
     borderWidth:1
     
   },
   btnText:{
-    color: '#161616',
-    fontSize:18,
+    color: '#ffffff',
+    fontSize:22,
+    letterSpacing:3,
     textAlign:'center',
   }
 })
