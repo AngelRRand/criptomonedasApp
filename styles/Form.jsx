@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     marginTop:20,
     justifyContent:'center',
     borderRadius:10,
+    border:'#161616',
+    borderWidth:1
     
   },
   btnText:{

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import styles from '../styles/Form'
 import { Picker } from '@react-native-picker/picker'
 import axios from 'axios'
-const Form = ({moneda, setMoneda, criptoMoneda, setCriptoMoneda}) => {
+const Form = ({moneda, setMoneda, criptoMoneda, setCriptoMoneda, setConsultarAPI}) => {
   
   const [criptoMonedas, setCriptoMonedas] = useState([]);
 
@@ -41,8 +41,7 @@ const Form = ({moneda, setMoneda, criptoMoneda, setCriptoMoneda}) => {
       Error();
       return;
     } else {
-
-      console.log('..cotizando')
+      setConsultarAPI(true)
     }
   }
 
