@@ -14,14 +14,16 @@ const styles = StyleSheet.create({
     fontSize:22,
     color: '#fff'
   },
-  btnSelect: {
-    width: 60,
+  btn: {
     height: 60,
-    textAlign:'center',
-    justifyContent:'center',
-    backgroundColor:'#fff',
-    color: '#f7f7f7',
+    backgroundColor:'#ffdb3c',
+    marginTop:20,
     alignItems:'center'
+  },
+  btnText:{
+    color: '#f7f7f7',
+    fontSize:18,
+    textAlign:'center',
   }
 })
 

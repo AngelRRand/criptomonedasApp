@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from 'react-native'
+import { View, Text, TouchableHighlight } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/Form'
 import { Picker } from '@react-native-picker/picker'
@@ -55,6 +55,15 @@ const Form = () => {
           })
         }
       </Picker>
+
+      <TouchableHighlight 
+        style={styles.btn}
+        onPress={()=>cotizarPrecio()}
+      >
+        <Text style={styles.btnText}>
+          COTIZAR
+        </Text>
+      </TouchableHighlight>
     </View>
   )
 }
