@@ -4,12 +4,12 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   encabezado: {
       paddingTop: 10,
-      backgroundColor:  '#181818',
+      backgroundColor:  '#ffffff',
       textAlign: 'center',
       paddingBottom:10,
       textTransform:'uppercase',
-      fontSize:20,
-      color: '#fff',
+      fontSize:28,
+      color: '#111111',
       marginBottom:20
   },
 })
