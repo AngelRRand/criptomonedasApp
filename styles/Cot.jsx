@@ -12,6 +12,10 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical:15,
   },
+  textPrice:{
+    color: '#fff',
+    fontSize:25
+  },
   text:{
     color: '#fff',
     fontSize:20
