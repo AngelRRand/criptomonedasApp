@@ -22,7 +22,7 @@ export default function App() {
         const result = await axios.get(url)
         setCargando(true)
         setTimeout(() => {
-          
+
           setResultado(result.data.DISPLAY[criptoMoneda][moneda])
           setConsultarAPI(false)
           setCargando(false)
@@ -34,31 +34,35 @@ export default function App() {
 
   //Mostrar el spinner o el resulttado
 
-  const component = cargando ? <ActivityIndicator size='large' color='#fff'/> :<Cot resultado={resultado}/>
+  const component = cargando ? <ActivityIndicator size='large' color='#fff' /> : <Cot resultado={resultado} />
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar />
-      <Header />
-      <Image
-        source={{ uri: 'https://i.postimg.cc/qBWhMx4Z/cryptomonedas.png' }}
-        style={styles.imagen}
+    <ScrollView>
 
-      />
-      <Form
-        moneda={moneda}
-        setMoneda={setMoneda}
-        criptoMoneda={criptoMoneda}
-        setCriptoMoneda={setCriptoMoneda}
-        setConsultarAPI={setConsultarAPI}
-      />
-      {
-        resultado.length === 0 ?
-          <></>
-          :
-          component
-        
-      }
+      <SafeAreaView style={styles.container}>
+        <StatusBar />
+        <Header />
+        <Image
+          source={{ uri: 'https://i.postimg.cc/qBWhMx4Z/cryptomonedas.png' }}
+          style={styles.imagen}
 
-    </SafeAreaView>
+        />
+        <Form
+          moneda={moneda}
+          setMoneda={setMoneda}
+          criptoMoneda={criptoMoneda}
+          setCriptoMoneda={setCriptoMoneda}
+          setConsultarAPI={setConsultarAPI}
+        />
+        {
+          resultado.length === 0 ?
+            <></>
+            :
+            component
+
+        }
+
+      </SafeAreaView>
+      
+    </ScrollView>
   );
 }
