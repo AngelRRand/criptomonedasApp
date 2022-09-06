@@ -4,7 +4,7 @@ import styles from '../styles/Header'
 
 const Header = () => {
   return (
-      <Text style={styles.encabezado}>CriptoMonedas</Text>
+      <Text style={styles.encabezado}>CriptOrasio </Text>
   )
 }
 

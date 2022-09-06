@@ -1,4 +1,4 @@
-import { ScrollView, Image, SafeAreaView, StatusBar, ActivityIndicator } from 'react-native';
+import { ScrollView, Image, SafeAreaView, StatusBar, ActivityIndicator, View } from 'react-native';
 import { useState, useEffect } from 'react';
 import styles from './styles/App';
 import Header from './src/Header';
@@ -36,9 +36,8 @@ export default function App() {
 
   const component = cargando ? <ActivityIndicator size='large' color='#fff' /> : <Cot resultado={resultado} />
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
 
-      <SafeAreaView style={styles.container}>
         <StatusBar />
         <Header />
         <Image
@@ -53,6 +52,8 @@ export default function App() {
           setCriptoMoneda={setCriptoMoneda}
           setConsultarAPI={setConsultarAPI}
         />
+        <View style={styles.cotizador}>
+
         {
           resultado.length === 0 ?
             <></>
@@ -61,7 +62,8 @@ export default function App() {
 
         }
 
-      </SafeAreaView>
+        </View>
+
       
     </ScrollView>
   );

@@ -11,7 +11,7 @@ const Cot = ({ resultado }) => {
       </View>
 
       <View style={styles.info}>
-        <Text style={styles.text}>Precio mas alto del dia: {resultado.HIGHDAT}</Text>
+        <Text style={styles.text}>Precio mas alto del dia: {resultado.HIGHDAY}</Text>
       </View>
 
       <View style={styles.info}>
